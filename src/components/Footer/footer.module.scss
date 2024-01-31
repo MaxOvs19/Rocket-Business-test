@@ -1,0 +1,29 @@
+footer {
+  background-color: #08664f;
+  height: 144px;
+  display: flex;
+}
+
+.box {
+  margin: 0 auto;
+  width: 1140px;
+  max-width: 1140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  nav {
+    display: flex;
+    color: white;
+    gap: 36px;
+    font-size: 16px;
+  }
+}
+
+.contacts {
+  display: flex;
+  gap: 15px;
+}

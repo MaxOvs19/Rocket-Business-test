@@ -1,0 +1,13 @@
+.baseButton {
+  width: 196px;
+  height: 43px;
+  font-size: 14px;
+  border-radius: 50px;
+  background-color: #0dbc91;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
