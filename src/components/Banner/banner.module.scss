@@ -1,3 +1,40 @@
 .banner {
-  background-color: #f8fbfa;
+  background: rgb(248, 251, 250);
+  height: 533px;
+
+  overflow: hidden;
+}
+
+.bannerBox {
+  margin: 0 auto;
+  width: 1140px;
+  max-width: 1140px;
+  position: relative;
+
+  div {
+    width: 367px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 144px;
+    color: rgb(54, 72, 68);
+
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 47px;
+    }
+
+    p {
+      margin-top: 14px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+  img {
+    position: absolute;
+    right: -355px;
+    top: 0;
+  }
 }
