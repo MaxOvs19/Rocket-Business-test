@@ -1,0 +1,25 @@
+.arrowBtn {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.4s;
+
+  svg {
+    &:hover {
+      path {
+        transition: 0.4s;
+        fill: rgb(13, 188, 145);
+      }
+    }
+  }
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.right {
+}

@@ -3,4 +3,132 @@
   width: 1140px;
   max-width: 1140px;
   padding: 12px 0;
+  margin-bottom: 98px;
+}
+
+.slide {
+  display: flex;
+  background: rgb(226, 240, 239);
+  justify-content: space-between;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.textBox {
+  color: rgb(54, 72, 68);
+  padding: 54px 0 53px 64px;
+  position: relative;
+  z-index: 5;
+
+  h1 {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 49px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+    padding-left: 20px;
+
+    li {
+      &::marker {
+        color: rgb(31, 161, 129);
+        font-size: 17px;
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        margin-left: -5px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    right: -173px;
+    z-index: 6;
+    bottom: 1px;
+    border: 151px solid transparent;
+    border-bottom: 440px solid rgb(226, 240, 239);
+    border-left: 45px solid rgb(226, 240, 239);
+    border-top: 0px solid rgb(226, 240, 239);
+  }
+}
+
+.cost {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 33px;
+
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    color: rgb(134, 134, 134);
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 25px;
+  z-index: 10;
+  position: relative;
+
+  button {
+    &:last-child {
+      color: rgb(13, 188, 145);
+      border: 1px solid rgb(13, 188, 145);
+      background-color: transparent;
+      transition: 0.4s;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+        transition: 0.4s;
+        background: rgb(13, 188, 145);
+      }
+    }
+  }
+}
+
+.sliderBtn {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  display: flex;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 39px;
+
+  p {
+    color: rgb(225, 225, 225);
+  }
+
+  span {
+    color: rgb(54, 72, 68);
+  }
 }
