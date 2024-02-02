@@ -34,11 +34,37 @@
   display: block;
 }
 
-@media (max-width: 1200px) {
-}
-
 @media (max-width: 769px) {
+  .faqItem {
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+    }
+  }
+
+  .content {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 597px) {
+  .faqItem {
+    padding: 12px;
+
+    img {
+      display: none;
+    }
+  }
+
+  .active {
+  }
+
+  .content {
+    display: block;
+  }
 }

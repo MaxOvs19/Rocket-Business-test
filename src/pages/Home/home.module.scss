@@ -11,11 +11,16 @@
   }
 }
 
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 769px) {
-}
-
 @media (max-width: 490px) {
+  .home {
+    h2 {
+      margin: 35px 0;
+      padding-left: 17px;
+      width: 85%;
+      text-align: left;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+  }
 }
