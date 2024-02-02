@@ -1,7 +1,7 @@
 .faqItem {
   border-radius: 5px;
   background: rgb(248, 251, 250);
-  width: 100%;
+
   padding: 40px;
   color: rgb(54, 72, 68);
   position: relative;
@@ -32,4 +32,13 @@
 .active {
   transition: 0.4s;
   display: block;
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 769px) {
+}
+
+@media (max-width: 490px) {
 }
