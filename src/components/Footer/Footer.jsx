@@ -11,8 +11,8 @@ const Footer = () => {
   return (
     <footer>
       <div className={classes.box}>
-        <img src={logo} alt="@" />
         <div className={classes.nav}>
+          <img src={logo} alt="@" />
           <nav>
             <p>О клинике</p>
             <p>Услуги</p>

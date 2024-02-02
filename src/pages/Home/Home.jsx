@@ -11,7 +11,7 @@ const Home = () => {
       <Banner />
       <h2>Часто задаваемые вопросы</h2>
       <Faq />
-      {/* <Slider /> */}
+      <Slider />
     </div>
   );
 };

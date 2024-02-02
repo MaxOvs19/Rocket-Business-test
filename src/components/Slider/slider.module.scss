@@ -135,10 +135,89 @@
 }
 
 @media (max-width: 1200px) {
+  .slider {
+    width: 95%;
+  }
+
+  .slide {
+    img {
+      position: relative;
+      height: 430px;
+    }
+  }
 }
 
 @media (max-width: 769px) {
+  .slide {
+    flex-direction: column-reverse;
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .textBox {
+    padding: 22px 0 42px 23px;
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      z-index: 0;
+      bottom: 0;
+      border: 0;
+      border-bottom: 0;
+      border-left: 0;
+      border-top: 0;
+    }
+  }
 }
 
 @media (max-width: 490px) {
+  .textBox {
+    padding: 22px 0 35px 12px;
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 18px;
+    }
+
+    ul {
+      li {
+        &::marker {
+          color: rgb(31, 161, 129);
+          font-size: 17px;
+        }
+
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 145%;
+        }
+      }
+    }
+  }
+
+  .cost {
+    p {
+      font-size: 18px;
+      line-height: 23px;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  .buttons {
+    button {
+      width: 137px;
+    }
+  }
 }
