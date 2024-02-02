@@ -7,9 +7,12 @@ import image from "../../assets/doctor-working.png";
 import "swiper/css";
 import classes from "./slider.module.scss";
 import SliderBtn from "./SliderBtn/SliderBtn";
+import Modal from "../Modal/Modal";
 
 const Slider = () => {
   const [page, setPage] = useState(1);
+  const [active, setActive] = useState(false);
+
   return (
     <div className={classes.slider}>
       <Swiper>
@@ -37,7 +40,9 @@ const Slider = () => {
                 <span>3500₽</span>
               </div>
               <div className={classes.buttons}>
-                <BaseButton>Записаться</BaseButton>
+                <BaseButton onClick={() => setActive(true)}>
+                  Записаться
+                </BaseButton>
                 <BaseButton>Подробнее</BaseButton>
               </div>
             </div>
@@ -70,7 +75,9 @@ const Slider = () => {
                 <span>3500₽</span>
               </div>
               <div className={classes.buttons}>
-                <BaseButton>Записаться</BaseButton>
+                <BaseButton onClick={() => setActive(true)}>
+                  Записаться
+                </BaseButton>
                 <BaseButton>Подробнее</BaseButton>
               </div>
             </div>
@@ -103,7 +110,9 @@ const Slider = () => {
                 <span>3500₽</span>
               </div>
               <div className={classes.buttons}>
-                <BaseButton>Записаться</BaseButton>
+                <BaseButton onClick={() => setActive(true)}>
+                  Записаться
+                </BaseButton>
                 <BaseButton>Подробнее</BaseButton>
               </div>
             </div>
@@ -136,7 +145,9 @@ const Slider = () => {
                 <span>3500₽</span>
               </div>
               <div className={classes.buttons}>
-                <BaseButton>Записаться</BaseButton>
+                <BaseButton onClick={() => setActive(true)}>
+                  Записаться
+                </BaseButton>
                 <BaseButton>Подробнее</BaseButton>
               </div>
             </div>
@@ -154,6 +165,8 @@ const Slider = () => {
           <SliderBtn type={0} page={page} setPage={setPage} />
         </div>
       </Swiper>
+
+      <Modal active={active} setActive={setActive} />
     </div>
   );
 };

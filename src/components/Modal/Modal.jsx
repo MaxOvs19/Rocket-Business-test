@@ -1,8 +1,6 @@
 import React from "react";
 import BaseButton from "../../ui/BaseButton/BaseButton";
 
-import closeModal from "../../assets/closeModal.svg";
-
 import classes from "./modal.module.scss";
 
 const Modal = ({ active, setActive }) => {
@@ -23,20 +21,39 @@ const Modal = ({ active, setActive }) => {
             детали
           </p>
         </div>
-        <form className={classes.form}>
+        <form className={classes.form} method="POST">
           <div className={classes.inputBox}>
-            <input type="text" placeholder="ФИО" />
+            <input type="text" placeholder="ФИО" name="fio" />
           </div>
           <div className={classes.inputBox}>
-            <input type="tel" placeholder="Номер телефона" />
+            <input type="tel" placeholder="Номер телефона" name="tel" />
           </div>
           <div className={classes.inputBox}>
-            <input type="email" placeholder="Электронная почта" />
+            <input type="email" placeholder="Электронная почта" name="email" />
           </div>
           <BaseButton>Записаться</BaseButton>
         </form>
 
-        <img src={closeModal} alt="@" onClick={() => setActive(false)} />
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={() => setActive(false)}
+        >
+          <path
+            d="M1 1L21.0001 21.0001"
+            stroke="#F8FBFA"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M1 21.0001L21.0001 0.999921"
+            stroke="#F8FBFA"
+            stroke-width="2"
+            stroke-linejoin="round"
+          />
+        </svg>
       </div>
     </div>
   );

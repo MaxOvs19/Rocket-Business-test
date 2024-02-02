@@ -24,7 +24,7 @@
   gap: 138px;
   position: relative;
 
-  img {
+  svg {
     position: absolute;
     top: -55px;
     right: 0px;
@@ -84,10 +84,59 @@
 }
 
 @media (max-width: 1200px) {
+  .modalContent {
+    gap: 10%;
+    padding: 30px 60px;
+  }
+
+  .text {
+    margin: 0;
+  }
+
+  .inputBox {
+    width: 255px;
+  }
 }
 
 @media (max-width: 769px) {
+  .modalContent {
+    flex-direction: column;
+    width: 72%;
+
+    svg {
+      top: 22px;
+      right: 22px;
+
+      path {
+        stroke: rgb(86, 155, 137);
+      }
+    }
+  }
+
+  .text {
+    margin: 0 0 40px 0;
+  }
+
+  .inputBox {
+    width: 100%;
+  }
 }
 
 @media (max-width: 490px) {
+  .modalContent {
+    padding: 36px;
+  }
+  .text {
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 34px;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
 }
