@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/Rocket-Business-test/static/css/main.646bdb07.css",
-    "main.js": "/Rocket-Business-test/static/js/main.ecd42182.js",
+    "main.css": "/Rocket-Business-test/static/css/main.3166cfaa.css",
+    "main.js": "/Rocket-Business-test/static/js/main.c5882369.js",
     "static/media/banner.png": "/Rocket-Business-test/static/media/banner.dd17d156723daacacb9e.png",
     "static/media/doctor-working.png": "/Rocket-Business-test/static/media/doctor-working.946726919a22d3d1b406.png",
     "static/media/point.svg": "/Rocket-Business-test/static/media/point.74c98bdfb8ec578718a571bb536ce2a0.svg",
     "index.html": "/Rocket-Business-test/index.html",
     "static/media/open.svg": "/Rocket-Business-test/static/media/open.3293e87110244c75e32e77482f9347c1.svg",
     "static/media/close.svg": "/Rocket-Business-test/static/media/close.ea19c6c05631eb9a0318545a60922aeb.svg",
-    "main.646bdb07.css.map": "/Rocket-Business-test/static/css/main.646bdb07.css.map",
-    "main.ecd42182.js.map": "/Rocket-Business-test/static/js/main.ecd42182.js.map"
+    "main.3166cfaa.css.map": "/Rocket-Business-test/static/css/main.3166cfaa.css.map",
+    "main.c5882369.js.map": "/Rocket-Business-test/static/js/main.c5882369.js.map"
   },
   "entrypoints": [
-    "static/css/main.646bdb07.css",
-    "static/js/main.ecd42182.js"
+    "static/css/main.3166cfaa.css",
+    "static/js/main.c5882369.js"
   ]
 }
