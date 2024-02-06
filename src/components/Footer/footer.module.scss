@@ -25,9 +25,12 @@ footer {
 
   nav {
     display: flex;
-    color: white;
     gap: 36px;
     font-size: 16px;
+
+    a {
+      color: white;
+    }
   }
 }
 

@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 import BaseButton from "../../ui/BaseButton/BaseButton";
+import SliderBtn from "./SliderBtn/SliderBtn";
+import Modal from "../Modal/Modal";
+import slider from "../api/slider.json";
 
 import image from "../../assets/doctor-working.png";
 
-import "swiper/css";
 import classes from "./slider.module.scss";
-import SliderBtn from "./SliderBtn/SliderBtn";
-import Modal from "../Modal/Modal";
+import "swiper/css";
 
 const Slider = () => {
   const [page, setPage] = useState(1);
@@ -15,147 +17,41 @@ const Slider = () => {
 
   return (
     <div className={classes.slider}>
-      <Swiper>
-        <SwiperSlide>
-          <div className={classes.slide}>
-            <div className={classes.textBox}>
-              <h1>Check-UP</h1>
-              <h3>для мужчин</h3>
-              <ul>
-                <li>
-                  <p>Гормональный скрининг</p>
-                </li>
-                <li>
-                  <p>Тестостерон</p>
-                </li>
-                <li>
-                  <p>Свободный тестостерон</p>
-                </li>
-                <li>
-                  <p>Глобулин, связывающий половые гормоны</p>
-                </li>
-              </ul>
-              <div className={classes.cost}>
-                <p>Всего 2800₽</p>
-                <span>3500₽</span>
-              </div>
-              <div className={classes.buttons}>
-                <BaseButton onClick={() => setActive(true)}>
-                  Записаться
-                </BaseButton>
-                <BaseButton>Подробнее</BaseButton>
-              </div>
-            </div>
+      <Swiper allowTouchMove={false}>
+        {slider.map((item) => {
+          return (
+            <SwiperSlide>
+              <div className={classes.slide}>
+                <div className={classes.textBox}>
+                  <h1>{item.title}</h1>
+                  <h3>{item.subTitle}</h3>
+                  <ul>
+                    {item.list.map((li) => {
+                      return (
+                        <li>
+                          <p>{li}</p>
+                        </li>
+                      );
+                    })}
+                  </ul>
 
-            <img src={image} alt="@" />
-          </div>
-        </SwiperSlide>
+                  <div className={classes.cost}>
+                    <p>Всего {item.price}₽</p>
+                    <span>{item.oldPrice}₽</span>
+                  </div>
+                  <div className={classes.buttons}>
+                    <BaseButton onClick={() => setActive(true)}>
+                      Записаться
+                    </BaseButton>
+                    <BaseButton>Подробнее</BaseButton>
+                  </div>
+                </div>
 
-        <SwiperSlide>
-          <div className={classes.slide}>
-            <div className={classes.textBox}>
-              <h1>Check-UP</h1>
-              <h3>для мужчин</h3>
-              <ul>
-                <li>
-                  <p>Гормональный скрининг</p>
-                </li>
-                <li>
-                  <p>Тестостерон</p>
-                </li>
-                <li>
-                  <p>Свободный тестостерон</p>
-                </li>
-                <li>
-                  <p>Глобулин, связывающий половые гормоны</p>
-                </li>
-              </ul>
-              <div className={classes.cost}>
-                <p>Всего 2800₽</p>
-                <span>3500₽</span>
+                <img src={image} alt="@" />
               </div>
-              <div className={classes.buttons}>
-                <BaseButton onClick={() => setActive(true)}>
-                  Записаться
-                </BaseButton>
-                <BaseButton>Подробнее</BaseButton>
-              </div>
-            </div>
-
-            <img src={image} alt="@" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className={classes.slide}>
-            <div className={classes.textBox}>
-              <h1>Check-UP</h1>
-              <h3>для мужчин</h3>
-              <ul>
-                <li>
-                  <p>Гормональный скрининг</p>
-                </li>
-                <li>
-                  <p>Тестостерон</p>
-                </li>
-                <li>
-                  <p>Свободный тестостерон</p>
-                </li>
-                <li>
-                  <p>Глобулин, связывающий половые гормоны</p>
-                </li>
-              </ul>
-              <div className={classes.cost}>
-                <p>Всего 2800₽</p>
-                <span>3500₽</span>
-              </div>
-              <div className={classes.buttons}>
-                <BaseButton onClick={() => setActive(true)}>
-                  Записаться
-                </BaseButton>
-                <BaseButton>Подробнее</BaseButton>
-              </div>
-            </div>
-
-            <img src={image} alt="@" />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className={classes.slide}>
-            <div className={classes.textBox}>
-              <h1>Check-UP</h1>
-              <h3>для мужчин</h3>
-              <ul>
-                <li>
-                  <p>Гормональный скрининг</p>
-                </li>
-                <li>
-                  <p>Тестостерон</p>
-                </li>
-                <li>
-                  <p>Свободный тестостерон</p>
-                </li>
-                <li>
-                  <p>Глобулин, связывающий половые гормоны</p>
-                </li>
-              </ul>
-              <div className={classes.cost}>
-                <p>Всего 2800₽</p>
-                <span>3500₽</span>
-              </div>
-              <div className={classes.buttons}>
-                <BaseButton onClick={() => setActive(true)}>
-                  Записаться
-                </BaseButton>
-                <BaseButton>Подробнее</BaseButton>
-              </div>
-            </div>
-
-            <img src={image} alt="@" />
-          </div>
-        </SwiperSlide>
-
+            </SwiperSlide>
+          );
+        })}
         <div className={classes.sliderBtn}>
           <SliderBtn type={1} page={page} setPage={setPage} />
           <p>

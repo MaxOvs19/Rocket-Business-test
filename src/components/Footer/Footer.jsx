@@ -14,11 +14,11 @@ const Footer = () => {
         <div className={classes.nav}>
           <img src={logo} alt="@" />
           <nav>
-            <p>О клинике</p>
-            <p>Услуги</p>
-            <p>Специалисты</p>
-            <p>Цены</p>
-            <p>Контакты</p>
+            <a href="#">О клинике</a>
+            <a href="#">Услуги</a>
+            <a href="#">Специалисты</a>
+            <a href="#">Цены</a>
+            <a href="#">Контакты</a>
           </nav>
         </div>
         <div className={classes.contacts}>

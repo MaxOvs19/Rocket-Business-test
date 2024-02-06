@@ -1,3 +1,7 @@
+.header {
+  position: relative;
+}
+
 .box {
   display: flex;
   flex-direction: row;
@@ -50,7 +54,8 @@
     gap: 36px;
     font-size: 16px;
 
-    p {
+    a {
+      color: white;
       cursor: pointer;
     }
   }
@@ -154,18 +159,26 @@
 }
 
 @media (max-width: 490px) {
+  .header {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    width: 100%;
+  }
+
   .boxTop {
     width: 95%;
   }
 
   .boxBottom {
-    position: absolute;
+    position: fixed;
     z-index: 99;
     backdrop-filter: blur(4px);
     background: rgba(69, 146, 127, 0.9);
     top: 62px;
     left: -565px;
-    width: 100%;
+    width: 96%;
     height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
